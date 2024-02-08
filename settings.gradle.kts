@@ -15,5 +15,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Composents"
-include(":app")
+include(":sample")
 include(":composents")
