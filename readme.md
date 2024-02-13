@@ -1,0 +1,1 @@
+[![Android CI](https://github.com/ThomasBernard03/Composents/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/ThomasBernard03/Composents/actions/workflows/main.yml)
