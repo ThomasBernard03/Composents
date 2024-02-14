@@ -57,7 +57,7 @@ afterEvaluate {
 
                 groupId = "com.github.thomasbernard03"
                 artifactId = "composents"
-                version = "2.0.3"
+                version = "1.0.0"
             }
         }
     }

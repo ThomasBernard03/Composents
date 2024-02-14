@@ -11,17 +11,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import fr.thomasbernard03.composents.ui.theme.ComposentsTheme
-import kotlinx.coroutines.yield
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,11 +36,13 @@ class MainActivity : ComponentActivity() {
                             verticalArrangement = Arrangement.spacedBy(12.dp)
                         ) {
                             // Generate a list of 10 items
-                            val dropDownItems by remember { mutableStateOf((1..100).map { it.toString() }) }
-                            var selectedItem by remember { mutableStateOf("") }
+                            val dropDownItems by remember { mutableStateOf((1..100).toList()) }
+                            var selectedItem by remember { mutableStateOf(0) }
+
 
                             DropDown(
                                 modifier = Modifier.fillMaxWidth(),
+                                label = { "Valeur n°$it" },
                                 placeholder = "Choose one item",
                                 selectedItem = selectedItem,
                                 items = dropDownItems

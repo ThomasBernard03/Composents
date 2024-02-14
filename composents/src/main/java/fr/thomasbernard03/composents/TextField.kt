@@ -27,8 +27,7 @@ fun TextField(
     modifier: Modifier = Modifier,
     onTextChange: (String) -> Unit= {},
     placeholder: String = "",
-    @DrawableRes trailingIcon : Int? = null,
-    trailingText : String = "",
+    trailingIcon: @Composable (() -> Unit)? = null,
     readOnly : Boolean = false,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Done),
     keyboardActions: KeyboardActions = KeyboardActions.Default,
@@ -60,22 +59,7 @@ fun TextField(
         ),
         keyboardOptions = keyboardOptions,
         keyboardActions = keyboardActions,
-        trailingIcon = {
-            if (trailingIcon != null){
-                Icon(
-                    painter = painterResource(trailingIcon),
-                    contentDescription = "Text field icon",
-                    tint = Color.LightGray)
-            }
-            else if (trailingText.isNotEmpty()){
-                Text(
-                    text = trailingText,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = DarkGray,
-                    modifier = Modifier.padding(end = 8.dp)
-                )
-            }
-        },
+        trailingIcon = trailingIcon,
         readOnly = readOnly,
         enabled = !readOnly
     )

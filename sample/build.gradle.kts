@@ -68,4 +68,5 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     implementation(project(":composents"))
+    // implementation("com.github.ThomasBernard03:Composents:0.2.10")
 }
