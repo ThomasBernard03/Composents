@@ -37,6 +37,8 @@ class MainActivity : ComponentActivity() {
                         ) {
                             // Generate a list of 10 items
                             val dropDownItems by remember { mutableStateOf((1..100).toList()) }
+                            val dropDownWithSearchItems by remember { mutableStateOf((1..100).toList()) }
+                            var dropDownWithSearchQuery by remember { mutableStateOf("") }
                             var selectedItem by remember { mutableStateOf(0) }
 
 
@@ -48,6 +50,21 @@ class MainActivity : ComponentActivity() {
                                 items = dropDownItems
                             ){
                                 selectedItem = it
+                            }
+
+                            DropDownWithSearch(
+                                modifier = Modifier.fillMaxWidth(),
+                                query = dropDownWithSearchQuery,
+                                onQueryChange = {
+                                    dropDownWithSearchQuery = it
+                                },
+                                label = { "Valeur n°$it" },
+                                placeholder = "Search one item",
+                                items =
+                                if (dropDownWithSearchQuery.isEmpty()) emptyList()
+                                else dropDownWithSearchItems.filter { it.toString().contains(dropDownWithSearchQuery) }
+                            ){
+                                dropDownWithSearchQuery = "Valeur selectionée : $it"
                             }
 
                             PrimaryButton(
