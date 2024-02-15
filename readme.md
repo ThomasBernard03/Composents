@@ -1,4 +1,5 @@
 [![Android CI](https://github.com/ThomasBernard03/Composents/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/ThomasBernard03/Composents/actions/workflows/main.yml)
+[![](https://jitpack.io/v/ThomasBernard03/Composents.svg)](https://jitpack.io/#ThomasBernard03/Composents)
 
 
 ##
