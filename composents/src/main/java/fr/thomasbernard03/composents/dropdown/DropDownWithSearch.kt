@@ -1,4 +1,4 @@
-package fr.thomasbernard03.composents
+package fr.thomasbernard03.composents.dropdown
 
 import androidx.compose.foundation.background
 import androidx.compose.material3.DropdownMenuItem
@@ -12,6 +12,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import fr.thomasbernard03.composents.TextField
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

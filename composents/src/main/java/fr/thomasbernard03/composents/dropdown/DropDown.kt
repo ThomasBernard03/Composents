@@ -1,4 +1,4 @@
-package fr.thomasbernard03.composents
+package fr.thomasbernard03.composents.dropdown
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.background
@@ -16,6 +16,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.res.painterResource
+import fr.thomasbernard03.composents.R
+import fr.thomasbernard03.composents.TextField
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

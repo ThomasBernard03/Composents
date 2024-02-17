@@ -19,9 +19,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import fr.thomasbernard03.composents.NavigationBar
+import fr.thomasbernard03.composents.animations.animatedComposable
 import fr.thomasbernard03.composents.presentation.buttons.ButtonsScreen
+import fr.thomasbernard03.composents.presentation.dropdowns.DropDownsScreen
 import fr.thomasbernard03.composents.presentation.home.HomeScreen
 import fr.thomasbernard03.composents.ui.theme.ComposentsTheme
 
@@ -39,6 +42,7 @@ class MainActivity : ComponentActivity() {
                         NavigationBar(
                             title = "Composents",
                             subtitle = subtitle,
+                            showBackButton = navController.currentBackStackEntryAsState().value?.destination?.route != "home",
                             onBack = navController::navigateUp
                         )
                     }
@@ -48,13 +52,18 @@ class MainActivity : ComponentActivity() {
                         color = MaterialTheme.colorScheme.background
                     ) {
                         NavHost(navController = navController, startDestination = "home"){
-                            composable("home"){
+                            animatedComposable("home"){
                                 subtitle = ""
                                 HomeScreen(navController = navController)
                             }
-                            composable("buttons"){
+                            animatedComposable("buttons"){
                                 subtitle = "Buttons"
                                 ButtonsScreen()
+                            }
+
+                            animatedComposable("dropdowns"){
+                                subtitle = "Dropdowns"
+                                DropDownsScreen()
                             }
                         }
                     }
