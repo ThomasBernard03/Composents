@@ -26,6 +26,7 @@ import fr.thomasbernard03.composents.animations.animatedComposable
 import fr.thomasbernard03.composents.presentation.buttons.ButtonsScreen
 import fr.thomasbernard03.composents.presentation.dropdowns.DropDownsScreen
 import fr.thomasbernard03.composents.presentation.home.HomeScreen
+import fr.thomasbernard03.composents.presentation.navigationbars.NavigationBarsScreen
 import fr.thomasbernard03.composents.ui.theme.ComposentsTheme
 
 class MainActivity : ComponentActivity() {
@@ -64,6 +65,11 @@ class MainActivity : ComponentActivity() {
                             animatedComposable("dropdowns"){
                                 subtitle = "Dropdowns"
                                 DropDownsScreen()
+                            }
+
+                            animatedComposable("navigationbars"){
+                                subtitle = "Navigation bars"
+                                NavigationBarsScreen()
                             }
                         }
                     }

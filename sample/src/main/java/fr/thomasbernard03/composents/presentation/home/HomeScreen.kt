@@ -28,5 +28,10 @@ fun HomeScreen(navController: NavController){
             modifier = Modifier.fillMaxWidth(),
             onClick = { navController.navigate("dropdowns") })
 
+        PrimaryButton(
+            text = "Navigation bars",
+            modifier = Modifier.fillMaxWidth(),
+            onClick = { navController.navigate("navigationbars") })
+
     }
 }

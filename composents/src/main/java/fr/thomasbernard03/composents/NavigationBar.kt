@@ -30,7 +30,7 @@ import fr.thomasbernard03.composents.buttons.SquaredButton
 fun NavigationBar(
     title : String,
     subtitle : String = "",
-    showBackButton : Boolean = true,
+    showBackButton : Boolean = false,
     onBack : () -> Unit = {},
     actions : @Composable (RowScope) -> Unit = {}
 ){
@@ -41,7 +41,7 @@ fun NavigationBar(
                     modifier = Modifier.padding(horizontal = 8.dp),
                     resource = R.drawable.arrow,
                     onClick = onBack,
-                    backgroundColor = Color.Black,
+                    backgroundColor = Color.Black.copy(alpha = 0.2f),
                     color = Color.White
                 )
             }
