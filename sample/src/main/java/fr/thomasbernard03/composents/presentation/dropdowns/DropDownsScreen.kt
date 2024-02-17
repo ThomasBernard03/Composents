@@ -17,6 +17,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import fr.thomasbernard03.composents.dropdown.DropDown
+import fr.thomasbernard03.composents.dropdown.DropDownWithSearch
 
 @Composable
 fun DropDownsScreen() {
@@ -44,5 +45,23 @@ fun DropDownsScreen() {
                 selectedItem = it
             })
 
+
+        Text(
+            text = "Default drop down",
+            style = MaterialTheme.typography.labelLarge)
+
+        val itemsDropDownWithSearch = listOf("Item 1", "Item 2", "Item 3")
+        var query by remember { mutableStateOf("") }
+
+
+        DropDownWithSearch(
+            modifier = Modifier.fillMaxWidth(),
+            placeholder = "Search an item",
+            query = query,
+            onQueryChange = { query = it },
+            items = itemsDropDownWithSearch.filter { it.contains(query, ignoreCase = true) },
+            itemSelected = {
+                query = it
+            })
     }
 }
