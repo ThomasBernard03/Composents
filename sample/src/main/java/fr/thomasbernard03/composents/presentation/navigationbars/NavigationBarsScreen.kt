@@ -10,9 +10,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import fr.thomasbernard03.composents.NavigationBar
+import fr.thomasbernard03.composents.navigationbars.NavigationBar
 import fr.thomasbernard03.composents.R
 import fr.thomasbernard03.composents.buttons.SquaredButton
+import fr.thomasbernard03.composents.navigationbars.NavigationBarDefaults
 
 @Composable
 fun NavigationBarsScreen(){
@@ -40,7 +41,7 @@ fun NavigationBarsScreen(){
             title = "Navigation bar",
             subtitle = "With action button"){
             SquaredButton(
-                backgroundColor = Color.Black.copy(alpha = 0.2f),
+                backgroundColor = NavigationBarDefaults.buttonBackgroundColor,
                 resource = R.drawable.drop_down_icon,
                 onClick = {  })
         }
@@ -50,7 +51,7 @@ fun NavigationBarsScreen(){
             showBackButton = true,
             subtitle = "With buttons"){
             SquaredButton(
-                backgroundColor = Color.Black.copy(alpha = 0.2f),
+                backgroundColor = NavigationBarDefaults.buttonBackgroundColor,
                 resource = R.drawable.drop_down_icon,
                 onClick = {  })
         }
@@ -60,12 +61,12 @@ fun NavigationBarsScreen(){
             showBackButton = true,
             subtitle = "With buttons"){
             SquaredButton(
-                backgroundColor = Color.Black.copy(alpha = 0.2f),
+                backgroundColor = NavigationBarDefaults.buttonBackgroundColor,
                 resource = R.drawable.drop_down_icon,
                 onClick = {  })
 
             SquaredButton(
-                backgroundColor = Color.Black.copy(alpha = 0.2f),
+                backgroundColor = NavigationBarDefaults.buttonBackgroundColor,
                 resource = R.drawable.drop_down_icon,
                 onClick = {  })
         }
