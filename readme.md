@@ -68,7 +68,5 @@ NavHost(navController = navController, startDestination = "home"){
     }
 }
 ```
-
 Slow motion demonstration :
-
-![alt text](screens/animated-composable.gif)
+<img src="screens/animated-composable.gif" width="270" align="right">
