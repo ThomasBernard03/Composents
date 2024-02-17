@@ -1,4 +1,4 @@
-package fr.thomasbernard03.composents.ui.theme
+package fr.thomasbernard03.sample.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

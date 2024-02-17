@@ -1,4 +1,4 @@
-package fr.thomasbernard03.composents.presentation
+package fr.thomasbernard03.sample.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -17,17 +17,17 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import fr.thomasbernard03.composents.navigationbars.NavigationBar
 import fr.thomasbernard03.composents.animations.animatedComposable
-import fr.thomasbernard03.composents.presentation.buttons.ButtonsScreen
-import fr.thomasbernard03.composents.presentation.dropdowns.DropDownsScreen
-import fr.thomasbernard03.composents.presentation.home.HomeScreen
-import fr.thomasbernard03.composents.presentation.navigationbars.NavigationBarsScreen
-import fr.thomasbernard03.composents.ui.theme.ComposentsTheme
+import fr.thomasbernard03.sample.presentation.buttons.ButtonsScreen
+import fr.thomasbernard03.sample.presentation.dropdowns.DropDownsScreen
+import fr.thomasbernard03.sample.presentation.home.HomeScreen
+import fr.thomasbernard03.sample.presentation.navigationbars.NavigationBarsScreen
+import fr.thomasbernard03.sample.ui.theme.SampleTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ComposentsTheme {
+            SampleTheme {
                 val navController = rememberNavController()
                 var subtitle by remember { mutableStateOf("") }
 

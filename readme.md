@@ -2,7 +2,9 @@
 [![](https://jitpack.io/v/ThomasBernard03/Composents.svg)](https://jitpack.io/#ThomasBernard03/Composents)
 
 
-##
+# Components
+
+## Instalation 💿
 
 In settings.gradle.kts add jitpack repository :
 ```kotlin
@@ -18,12 +20,7 @@ Then you can add dependency :
 implementation("com.github.ThomasBernard03:Composents:version")
 ```
 
-
-# Components 
-
-
-
-## Buttons 
+## Buttons 🖲️
 
 
 ### PrimaryButton
@@ -36,7 +33,7 @@ fun PrimaryButton(
     enabled: Boolean = true,
     loading : Boolean = false,
     onClick: () -> Unit
-){}
+)
 ```
 
 ### OutlinedButton
@@ -51,11 +48,25 @@ fun OutlinedButton(
     loading : Boolean = false,
     color : Color = MaterialTheme.colorScheme.primary,
     onClick: () -> Unit
-){}
+)
 ```
 
+### RoundedButton
+![alt text](screens/squared-button.png)
+```kotlin
+@Composable
+fun SquaredButton(
+    modifier : Modifier = Modifier,
+    @DrawableRes resource: Int,
+    onClick: () -> Unit,
+    backgroundColor : Color = MaterialTheme.colorScheme.primary,
+    color : Color = Color.White,
+) 
+```
 
-## Navigation
+## Navigation 🧭
+
+### Animation
 
 animatedComposable is an extension method of NavGraphBuilder. It can be used like this : 
 ```kotlin
@@ -70,3 +81,8 @@ NavHost(navController = navController, startDestination = "home"){
 ```
 Slow motion demonstration :
 <img src="screens/animated-composable.gif" width="270" align="right">
+
+
+### Navigation bar
+
+![alt text](screens/navigation-bars.png)

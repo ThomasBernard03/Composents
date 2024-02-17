@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "fr.thomasbernard03.composents"
+    namespace = "fr.thomasbernard03.sample"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "fr.thomasbernard03.composents"
+        applicationId = "fr.thomasbernard03.sample"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
