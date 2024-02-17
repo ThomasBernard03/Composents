@@ -1,5 +1,6 @@
 package fr.thomasbernard03.composents.buttons
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.height
@@ -17,22 +18,32 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun PrimaryButton(
+fun PrimaryButton2(
     text : String,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     loading : Boolean = false,
     onClick: () -> Unit
 ) {
+    val height = 48.dp
+
     Button(
         onClick = {
             if (!loading)
                 onClick()
         },
-        modifier = modifier.height(48.dp),
+        modifier = Modifier
+            .height(height)
+            .then(
+                if (loading)
+                    Modifier.width(height)
+                else
+                    Modifier
+            )
+            .then(modifier),
         contentPadding = PaddingValues(0.dp),
         enabled = enabled,
-        shape = RoundedCornerShape(6.dp),
+        shape = RoundedCornerShape(if (loading) height/2 else 6.dp),
         colors = ButtonDefaults.buttonColors(
             containerColor = MaterialTheme.colorScheme.primary
         )
