@@ -68,7 +68,13 @@ fun SquaredButton(
 
 ### Animation
 
-animatedComposable is an extension method of NavGraphBuilder. It can be used like this : 
+
+Slow motion demonstration :
+
+<img src="screens/animated-composable.gif" width="150" align="right">
+
+animatedComposable is an extension method of NavGraphBuilder. To use it, simply replace the "composables" in your NavHost with animatedComposables. It can be used like this : 
+
 ```kotlin
 NavHost(navController = navController, startDestination = "home"){
     animatedComposable("home"){
@@ -79,8 +85,6 @@ NavHost(navController = navController, startDestination = "home"){
     }
 }
 ```
-Slow motion demonstration :
-<img src="screens/animated-composable.gif" width="270" align="right">
 
 
 ### Navigation bar
