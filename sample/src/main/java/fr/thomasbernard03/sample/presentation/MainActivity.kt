@@ -18,9 +18,9 @@ import androidx.navigation.compose.rememberNavController
 import fr.thomasbernard03.composents.navigationbars.NavigationBar
 import fr.thomasbernard03.composents.animations.animatedComposable
 import fr.thomasbernard03.sample.presentation.buttons.ButtonsScreen
-import fr.thomasbernard03.sample.presentation.dropdowns.DropDownsScreen
 import fr.thomasbernard03.sample.presentation.home.HomeScreen
 import fr.thomasbernard03.sample.presentation.navigationbars.NavigationBarsScreen
+import fr.thomasbernard03.sample.presentation.textfields.TextFieldsScreen
 import fr.thomasbernard03.sample.ui.theme.SampleTheme
 
 class MainActivity : ComponentActivity() {
@@ -56,9 +56,9 @@ class MainActivity : ComponentActivity() {
                                 ButtonsScreen()
                             }
 
-                            animatedComposable("dropdowns"){
-                                subtitle = "Dropdowns"
-                                DropDownsScreen()
+                            animatedComposable("textfields"){
+                                subtitle = "TextFields"
+                                TextFieldsScreen()
                             }
 
                             animatedComposable("navigationbars"){

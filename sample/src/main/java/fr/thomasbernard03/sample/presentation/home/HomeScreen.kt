@@ -40,10 +40,10 @@ fun HomeScreen(navController: NavController){
             })
 
         PrimaryButton(
-            text = "Dropdowns",
+            text = "Textfields",
             modifier = Modifier.fillMaxWidth(),
             onClick = {
-                navigate("dropdowns")
+                navigate("textfields")
             })
 
         PrimaryButton(

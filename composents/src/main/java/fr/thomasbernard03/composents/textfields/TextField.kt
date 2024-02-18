@@ -1,4 +1,4 @@
-package fr.thomasbernard03.composents
+package fr.thomasbernard03.composents.textfields
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.shape.RoundedCornerShape
